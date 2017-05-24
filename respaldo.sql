@@ -23,6 +23,7 @@ DROP TABLE IF EXISTS `cometarios`;
 CREATE TABLE `cometarios` (
   `id_comentario` int(5) NOT NULL auto_increment,
   `cometario` varchar(500) default NULL,
+  `f_com` date NOT NULL,
   PRIMARY KEY  (`id_comentario`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -65,6 +66,7 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `publicacion_1`;
 CREATE TABLE `publicacion_1` (
   `id_p` int(5) NOT NULL auto_increment,
+  `f_public` date NOT NULL,
   `publicacion` varchar(500) default NULL,
   `id_comentario` int(5) default NULL,
   `id_reaccion` int(5) default NULL,
@@ -87,6 +89,7 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `publicacion_2`;
 CREATE TABLE `publicacion_2` (
   `id_pa` int(5) NOT NULL auto_increment,
+  `f_pa` date NOT NULL,
   `p_autom` varchar(100) default NULL,
   `id_comentario` int(5) default NULL,
   `id_reaccion` int(5) default NULL,
@@ -216,4 +219,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-24 18:46:29
+-- Dump completed on 2017-05-24 19:10:32
