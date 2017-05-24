@@ -1,0 +1,47 @@
+create table COMETARIOS (
+id_comentario int(5) primary key,
+cometario varchar(500));
+
+create table REACCIONES (
+id_reaccion int(5) primary key,
+t_reaccion varchar(20));
+
+create table SOLICITUD (
+id_s int(5) primary key,
+s_soporte varchar(500));
+
+create table REPORTES (
+id_r int(5) primary key,
+reporte varchar(500));
+
+create table PUBLICACION_2 (
+id_pa int(5) primary key,
+p_autom varchar(100),
+id_comentario int(5) references comentarios,
+id_reaccion int(5) references reacciones);
+
+create table PUBLICACION_1 (
+id_p int(5) primary key,
+publicacion varchar(500),
+id_comentario int(5) references comentarios,
+id_reaccion int(5) references reacciones)
+
+create table REGISTRO (
+id_usuario int(5) primary key,
+nombre text(100),
+f_nac date,
+c_elec varchar(50),
+usuario varchar(15),
+contrasennia varchar(20));
+
+create table PUBLICACIONES (
+id_public int(5) primary key
+id_p int(5) references publicacion_1,
+id_pa int(5) references publicacion_2);
+
+create table PERFIL (
+id_perfil int(5) primary key,
+f_perfil longblob,
+t_perfil text(13),
+id_usuario int(5) references registro,
+id_public int(5) references publicaciones);
