@@ -1,0 +1,42 @@
+<!Doctype html>
+          <html>
+            <head>
+              <meta charset="UTF-8"/>
+              <title>Inicio</title>
+            </head>
+            <body>
+                <h1>Seguridad</h1>
+                <h2>Bienvenidos al modulo de Seguridad</h2>
+               
+                  <article>
+                    <form action="..\Programs\PHP\Home.php" method="POST">
+                        <label>Inicia Sesion</label> <br/>
+                        <label>Usuario: </label> <br/>
+                        <input type="text" name="User" maxlength="20" size="15" /> <br/>
+                        <label>Contraseña: </label> <br/>
+                        <input type="password" name="Password" maxlength="20" size="15"/> <br/>
+                        <input type="submit" value="Iniciar" />  
+                    </form>
+                  </article>
+                    <aside id="derecha">
+                      <form action="..\Programs\PHP\HomeRegistro.php" method="POST">
+                        <br/>
+                        <label>Registrar Nuevo usuario</label> <br/>
+                        <label>Nombre de Usuario: </label> <br/>
+                        <input type="text" name="UserR" maxlength="20" size="15" /> <br/>
+                        <label>Nombre:</label>
+                        <input type="text" name="nomb" maxlength="20" size="15" /> <br/>
+                        <label>Fecha de nacimiento</label>
+                        <input type="date" name="bday" /> <br/>
+                        <label>Email:</label>
+                        <input type="text" name="Email" /> <br/>
+                        <label>Ingrese su Contraseña: </label> <br/>
+                        <input type="password" name="PasswordR" maxlength="20" size="15" /> <br/>
+                        <input type="submit" value="Registrar"/>   
+                      </form>
+                      <small>El usuario y la contraseña solo aceptan letras, numeros y un maximo de 20 caracteres</small>                     
+                    </aside>
+                     
+                  
+            </body>
+          </html>
